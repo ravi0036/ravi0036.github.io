@@ -1,0 +1,36 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+header{
+    background-color: blueviolet;
+}
+
+footer{
+    background-color: blueviolet;
+}
+
+p{
+    color: ;
+}
+#my-photo{
+    box-shadow: 0 0 2px 1px black;
+}
+.sitetitle{
+    color: rgb(184, 124, 124);
+}
+.hobby-list{
+    list-style :none;
+}
+.hobby-list li:nth-child(odd){
+    background-color: blue;
+}
+nav a:hover
+nav a:focus{
+    background-color: pink;
+}
+nav a{
+    background-color: plum;
+    border: 2px solid;
+}
