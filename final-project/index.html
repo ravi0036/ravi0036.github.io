@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Star Media</title>
+    <!-- Link to the main CSS file (to be created later) -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Header section containing logo and navigation -->
+    <header class="site-header">
+        <!-- Logo of the company -->
+        <div class="logo">
+            <img src="assets/logo.png" alt="Three Star Media Logo">
+        </div>
+        <!-- Main navigation menu -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- Search input field -->
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button type="submit">🔍</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero section with a background image and welcome message -->
+    <section id="home" class="hero-section">
+        <!-- Hero image background -->
+        <img src="assets/main-banner.jpg" alt="Office Image" class="hero-image">
+        <!-- Hero text overlay -->
+        <div class="hero-text">
+            <h1>Welcome to Three Star Media</h1>
+            <p>Empowering your business with cutting-edge media solutions. Let's create something amazing together.</p>
+            <button class="cta-button">Connect with us</button>
+        </div>
+    </section>
+
+    <!-- About Us section providing company information -->
+    <section id="about" class="about-section">
+        <!-- Image representing the About Us section -->
+        <div class="about-image">
+            <img src="assets/about-us.jpg" alt="About Us Image">
+        </div>
+        <!-- Textual content describing the company -->
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>Three Star Media is a leading media company specializing in digital transformation, marketing, and creative solutions. Our team of experts is dedicated to helping businesses enhance their brand presence and achieve their goals.</p>
+        </div>
+    </section>
+
+    <!-- Services section listing the various services offered -->
+    <section id="services" class="services-section">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <!-- Individual service item for Digital Transformation -->
+            <div class="service-item">
+                <img src="assets/digital.jpg" alt="Digital Transformation">
+                <h3>Digital Transformation</h3>
+                <p>Transform your business with our digital solutions, including website development, app creation, and online marketing strategies.</p>
+                <button class="service-button">Digital Plans</button>
+            </div>
+            <!-- Individual service item for Marketing -->
+            <div class="service-item">
+                <img src="assets/marketing.jpg" alt="Marketing">
+                <h3>Marketing</h3>
+                <p>Boost your brand visibility with our comprehensive marketing services, from social media management to content creation.</p>
+                <button class="service-button">Marketing Plans</button>
+            </div>
+            <!-- Individual service item for Video Production -->
+            <div class="service-item">
+                <img src="assets/video.jpg" alt="Video Production">
+                <h3>Video Production</h3>
+                <p>Create engaging video content with our professional video production services, perfect for ads, tutorials, and more.</p>
+                <button class="service-button">Video Plans</button>
+            </div>
+            <!-- Individual service item for Web Development -->
+            <div class="service-item">
+                <img src="assets/web.jpg" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Develop a stunning, user-friendly website that effectively showcases your brand and services.</p>
+                <button class="service-button">Web Plans</button>
+            </div>
+            <!-- Individual service item for Print -->
+            <div class="service-item">
+                <img src="assets/print.jpg" alt="Print">
+                <h3>Print</h3>
+                <p>Our print services offer high-quality materials for all your branding needs, including brochures, flyers, and business cards.</p>
+                <button class="service-button">Print Plans</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision section explaining the company's vision -->
+    <section id="vision" class="vision-section">
+        <img src="assets/vision.jpg" alt="Our Vision">
+        <div class="vision-text">
+            <h2>Our Vision</h2>
+            <p>At Three Star Media, we believe in the power of creativity and technology to transform businesses. Our vision is to be a leader in innovative media solutions, helping our clients navigate the digital landscape with confidence.</p>
+            <button class="cta-button">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Team section introducing key team members -->
+    <section id="team" class="team-section">
+        <h2>Our Team</h2>
+        <div class="team-container">
+            <!-- Team member: John Doe -->
+            <div class="team-member">
+                <img src="assets/john.jpg" alt="John Doe">
+                <div class="team-member-info">
+                    <h3>John Doe</h3>
+                    <p>CEO and Co-owner</p>
+                    <p>John leads our team with a vision for innovative solutions and a passion for excellence. With over 20 years of experience in the media industry, he ensures that we deliver top-notch services to our clients.</p>
+                </div>
+            </div>
+            <!-- Team member: Bob Rite -->
+            <div class="team-member">
+                <img src="assets/bob.jpg" alt="Bob Rite">
+                <div class="team-member-info">
+                    <h3>Bob Rite</h3>
+                    <p>CFO and Co-owner</p>
+                    <p>Bob oversees our financial operations, ensuring that our company is always on a strong footing. His expertise in financial management is crucial to our growth and stability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section with a form and location information -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <!-- Contact form for user messages -->
+            <div class="contact-form">
+                <h3>Send us a message</h3>
+                <form>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <!-- Location information with a map -->
+            <div class="contact-location">
+                <h3>Location</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours of Operation section with a table of business hours -->
+    <section id="hours" class="hours-section">
+        <h2>Hours of Operation</h2>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Days</th>
+                <th>Hours</th>
+            </tr>
+            <tr>
+                <td>Monday - Friday</td>
+                <td>9 AM - 6 PM</td>
+            </tr>
+            <tr>
+                <td>Saturday - Sunday</td>
+                <td>Closed</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Footer with copyright information -->
+    <footer class="site-footer">
+        <p>© Copyright Three Star Media, 2020</p>
+        <p>All images are taken from Unsplash</p>
+    </footer>
+</body>
+</html>
