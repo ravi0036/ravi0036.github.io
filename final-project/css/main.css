@@ -1,0 +1,976 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Navbar should stay fixed at the top */
+.site-header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Align the logo vertically with the other elements */
+    margin-left: 40px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.main-nav {
+    display: flex;
+    flex: 1; /* Allow the nav to take up available space */
+    justify-content: center; /* Center the nav items */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0; /* Remove any default padding */
+    margin-bottom: 0; /* Ensure alignment with other elements */
+    margin-right: 240px;
+}
+
+.main-nav ul li {
+    margin-left: 40px;
+}
+
+.main-nav ul li a {
+    color: #d4a10a; /* Update the color of navbar elements */
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.main-nav ul li a:hover {
+    color: #f0c14b;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: #333; /* Set background color of input field */
+    border: 1px solid #d4a10a; /* Set border color of input field */
+    border-radius: 5px;
+    color: #fff; /* Set text color to white */
+}
+
+.search button {
+    background: none;
+    border: none;
+    color: #d4a10a; /* Update the color of the search button */
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 584px) {
+
+    /* Navbar */
+    .site-header {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align logo to the left */
+        position: relative;
+    }
+
+    .logo {
+        width: 100%;
+        padding-left: 0rem; /* Ensure the logo is aligned to the left with some padding */
+        margin-bottom: 1rem; /* Add space below the logo */
+        order: 1; /* Ensure logo appears first */
+    }
+
+    .main-nav {
+        width: 100%; /* Take up full width */
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        margin-bottom: 1rem; /* Add space below the navigation */
+        order: 2; /* Ensure navigation appears second */
+        border: #333 solid 1px;
+        padding-left: 1.5rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: start; /* Center align the nav items */
+        margin-right: 0; /* Remove the right margin */
+        width: 100%;
+    }
+
+    .main-nav ul li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 15px; /* Add margin between nav items */
+    }
+
+    .main-nav ul li:first-child a {
+        background-color: #d4a10a; /* Set background color for "Home" */
+        color: #333;
+        width: 100%;
+        text-align: center; /* Center align text */
+        display: block;
+        padding: 10px 28px;
+    }
+
+    .main-nav ul li a {
+        font-size: 1.3rem; /* Increase font size for better readability */
+        color: #d4a10a; /* Set the text color for navbar elements */
+        text-align: center; /* Center align text */
+        display: block;
+        padding: 10px 0;
+        width: 100%; /* Ensure links take full width */
+    }
+
+    .main-nav ul li a:hover {
+        color: #f0c14b; /* Change color on hover */
+    }
+
+    .search {
+        width: 100%; /* Search bar takes up full width */
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem; /* Add space above the search bar */
+        order: 3; /* Ensure search bar appears last */
+    }
+
+    .search input[type="text"] {
+        width: 85%; /* Input field takes up most of the search bar */
+        padding: 0.8rem; /* Adjust padding for mobile */
+        font-size: 1.1rem;
+        background-color: #fff; /* Set background color of input field to white */
+        color: #333; /* Set text color */
+        border: 1px solid #d4a10a; /* Set border color */
+        border-radius: 5px;
+    }
+
+    .search button {
+        background-color: #333; /* Set background color of button to #333 */
+        color: #d4a10a; /* Set text color to #d4a10a */
+        padding: 0.8rem; /* Adjust padding for mobile */
+        font-size: 1.3rem; /* Increase icon size */
+        border: none;
+        border-radius: 5px; /* Add a border-radius to match input field */
+    }
+}
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: url('assets/main-banner.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px; /* Adjust this value according to the height of your navbar */
+    margin-bottom: 0px; /* Add margin-bottom to create space below the hero section */
+}
+
+/* Hero Text Overlay */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #f0c14b;
+    color: #333;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #d4a10a;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 584px) {
+
+    /* Hero Section */
+    .hero-section {
+        position: relative;
+        background: url('assets/main-banner.jpg') no-repeat center center/cover;
+        height: 60vh; /* Reduce height for mobile screens */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px; /* Adjust based on the height of the fixed header */
+        padding: 1rem; /* Add padding to the section */
+    }
+
+    /* Hero Text Overlay */
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-align: center; /* Center align text for mobile */
+        background-color: rgba(0, 0, 0, 0.6); /* Increase opacity for readability */
+        padding: 1.5rem; /* Reduce padding for mobile */
+        border-radius: 10px;
+        width: 90%; /* Ensure the text block doesn't take full width */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Reduce font size for the title */
+        margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Reduce font size for the paragraph */
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        background-color: #f0c14b;
+        color: #333;
+        padding: 0.8rem 1.5rem; /* Adjust padding for the button */
+        text-transform: uppercase;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%; /* Make the button take full width on mobile */
+        text-align: center;
+    }
+
+    .cta-button:hover {
+        background-color: #d4a10a;
+    }
+}
+
+
+/* About Us Section */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10%;
+    background-color: #ffe599;
+    margin-top: 0px;
+    margin-bottom: 60px; /* Add margin-bottom to create space below the about section */
+}
+
+.about-image img {
+    max-width: 400px;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 584px) {
+
+    /* About Us Section */
+    .about-section {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem 5%; /* Reduce padding for mobile */
+        background-color: #ffe599;
+        margin-top: 0px;
+        margin-bottom: 40px; /* Reduce margin-bottom for mobile */
+    }
+
+    .about-image img {
+        max-width: 100%; /* Image takes full width on mobile */
+        border-radius: 10px;
+        margin-bottom: 1.5rem; /* Add space below the image */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .about-text {
+        text-align: center; /* Center text on mobile */
+    }
+
+    .about-text h2 {
+        font-size: 2rem; /* Reduce font size for mobile */
+        margin-bottom: 1rem;
+    }
+
+    .about-text p {
+        font-size: 1.1rem; /* Slightly reduce font size for mobile */
+        line-height: 1.5; /* Adjust line height for readability */
+    }
+}
+
+
+
+/* Services Section */
+.services-section {
+    background-color: #f4f4f4;
+    padding: 2rem 10%;
+    margin-bottom: 60px; /* Add margin-bottom to create space below the services section */
+}
+
+.services-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column; /* Stack the service rows vertically */
+    gap: 0rem; /* Space between the rows */
+}
+
+.service-row {
+    display: flex;
+    justify-content: space-around; /* Distribute items with less space between them */
+    flex-wrap: wrap;
+    gap: 10px; /* Add a small gap between the items */
+}
+
+.service-item-large {
+    background-color: #ffe599;
+    padding: 1.5rem;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+    text-align: center;
+    flex-basis: 49%; /* Slightly larger size for the first two items */
+}
+
+.service-item-large img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.service-item-large h3 {
+    font-size: 1.8rem; /* Slightly larger font size */
+    margin-bottom: 1rem;
+}
+
+.service-item-large p {
+    margin-bottom: 1rem;
+}
+
+.service-item {
+    background-color: #ffe599;
+    padding: 1rem;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+    text-align: center;
+    flex-basis: 31.5%; /* Slightly increase the size for the second row items */
+}
+
+.service-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    margin-bottom: 1rem;
+}
+
+.service-button {
+    background-color: #333;
+    color: white;
+    padding: 1.5rem 4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.service-button:hover {
+    background-color: #d4a10a;
+}
+
+@media (max-width: 584px) {
+
+    /* Services Section */
+    .services-section {
+        background-color: #f4f4f4;
+        padding: 1rem 5%; /* Reduce padding for mobile */
+        margin-bottom: 40px; /* Reduce margin-bottom for mobile */
+    }
+
+    .services-section h2 {
+        text-align: center;
+        font-size: 2rem; /* Slightly reduce the font size */
+        margin-bottom: 1.5rem;
+    }
+
+    .services-container {
+        display: flex;
+        flex-direction: column; /* Stack the service rows vertically */
+        gap: 1rem; /* Add some space between the rows */
+    }
+
+    .service-row {
+        display: flex;
+        flex-direction: column; /* Stack service items vertically */
+        align-items: center; /* Center service items horizontally */
+        gap: 1rem; /* Add space between the items */
+    }
+
+    .service-item-large,
+    .service-item {
+        background-color: #ffe599;
+        padding: 1rem; /* Reduce padding for mobile */
+        border-radius: 2px;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 100%; /* Ensure all items take full width */
+    }
+
+    .service-item-large img,
+    .service-item img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .service-item-large h3,
+    .service-item h3 {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+        margin-bottom: 1rem;
+    }
+
+    .service-item-large p,
+    .service-item p {
+        font-size: 1rem; /* Adjust font size for mobile */
+        margin-bottom: 1rem;
+    }
+
+    .service-button {
+        background-color: #333;
+        color: white;
+        padding: 0.8rem 2rem; /* Reduce padding for the button */
+        text-transform: uppercase;
+        font-weight: bold;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        width: 100%; /* Make the button full width */
+        text-align: center;
+    }
+
+    .service-button:hover {
+        background-color: #d4a10a;
+    }
+}
+
+
+/* Vision Section */
+.vision-section {
+    position: relative;
+    background-image: url('assets/vision.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    padding: 0 10%;
+    color: #fff;
+    margin-bottom: 60px;
+    overflow: hidden; /* Ensure no overflow issues */
+}
+
+/* Vision Text Overlay */
+.vision-text {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: left; /* Align text to the left */
+    z-index: 1; /* Ensure the text is above the background */
+}
+
+.vision-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.vision-text p {
+    font-size: 1.2rem;
+}
+
+.vision-section .cta-button {
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 1px solid #d4a10a;
+    color: white;
+}
+
+@media (max-width: 584px) {
+
+    /* Vision Section */
+    .vision-section {
+        position: relative;
+        background-image: url('assets/vision.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80vh; /* Reduce height for mobile screens */
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center content on mobile */
+        padding: 0 5%; /* Reduce padding for mobile */
+        color: #fff;
+        margin-bottom: 40px; /* Reduce margin-bottom for mobile */
+        overflow: hidden; /* Ensure no overflow issues */
+    }
+
+    /* Vision Text Overlay */
+    .vision-text {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.6); /* Increase opacity for better readability */
+        padding: 1.5rem; /* Reduce padding for mobile */
+        border-radius: 10px;
+        text-align: center; /* Center align text on mobile */
+        z-index: 1; /* Ensure the text is above the background */
+        width: 90%; /* Ensure the text block doesn't take full width */
+    }
+
+    .vision-text h2 {
+        font-size: 2rem; /* Reduce font size for mobile */
+        margin-bottom: 0.8rem;
+    }
+
+    .vision-text p {
+        font-size: 1rem; /* Reduce font size for mobile */
+        margin-bottom: 1rem;
+    }
+
+    .vision-section .cta-button {
+        margin-top: 1rem;
+        background-color: transparent;
+        border: 1px solid #d4a10a;
+        color: white;
+        padding: 0.8rem 1.5rem; /* Adjust padding for the button */
+        width: 100%; /* Make the button take full width */
+        text-align: center;
+    }
+}
+
+
+/* Team Section */
+.team-section {
+    padding: 2rem 10%;
+    background-color: white;
+    margin-bottom: 100px; /* Add margin-bottom to create space below the team section */
+}
+
+.team-section h2 {
+    text-align: left; /* Align the section title to the left */
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column; /* Stack team-member divs vertically */
+    gap: 0rem; /* Add space between team-member divs */
+}
+
+/* Common styles for both team members */
+.team-member1, .team-member2 {
+    display: flex;
+    align-items: stretch; /* Make the items inside the container stretch to the same height */
+    background-color: #ffe599;
+    padding: 0rem; /* Increase padding for a larger container */
+    border-radius: 0px;
+    text-align: left;
+    height: 250px; /* Set a fixed height for the team member container */
+}
+
+/* Image on the left (default) */
+.team-member1 img {
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Image height matches the container height */
+    border-radius: 0px;
+    margin-right: 2rem; /* Add space between the image and the text */
+}
+
+/* Image on the right for team-member2 */
+.team-member2 {
+    flex-direction: row-reverse; /* Switch the order of elements */
+}
+
+.team-member2 img {
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Image height matches the container height */
+    border-radius: 0px;
+    margin-left: 2rem; /* Add space between the image and the text */
+    margin-right: 0; /* Remove the right margin */
+}
+
+.team-member-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text content vertically */
+}
+
+.team-member-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #333;
+    margin-left: 20px;
+    margin-right: 12px; /* Add bottom border under h3 */
+}
+
+.team-member-info p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 20px;
+    margin-right: 12px;
+}
+
+
+@media (max-width: 584px) {
+
+    /* Team Section */
+    .team-section {
+        padding: 1.5rem 5%; /* Reduce padding for mobile */
+        background-color: white;
+        margin-bottom: 60px; /* Reduce margin-bottom for mobile */
+    }
+
+    .team-section h2 {
+        text-align: center; /* Center align the section title on mobile */
+        font-size: 2rem; /* Reduce font size for mobile */
+        margin-bottom: 1.5rem;
+    }
+
+    .team-container {
+        display: flex;
+        flex-direction: column; /* Stack team-member divs vertically */
+        gap: 1.5rem; /* Add space between team-member divs */
+    }
+
+    /* Common styles for both team members */
+    .team-member1, .team-member2 {
+        display: flex;
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center align content */
+        background-color: #ffe599;
+        padding: 1rem; /* Add padding for a more balanced container */
+        border-radius: 10px;
+        text-align: center; /* Center align text content */
+        height: auto; /* Remove fixed height for a more flexible layout */
+    }
+
+    /* Centered Image Styles */
+    .team-member1 img, .team-member2 img {
+        width: 80%; /* Adjust width to allow for margins on both sides */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px;
+        margin: 0 auto 1rem auto; /* Center the image and add space below */
+        display: block; /* Ensure the image is treated as a block-level element */
+    }
+
+    .team-member-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center the text content vertically */
+    }
+
+    .team-member-info h3 {
+        font-size: 1.6rem; /* Slightly reduce font size for mobile */
+        margin-bottom: 0.5rem;
+        border-bottom: 2px solid #333;
+    }
+
+    .team-member-info p {
+        font-size: 1rem; /* Reduce font size for mobile */
+        margin-bottom: 0.5rem;
+        padding: 0 1rem; /* Add padding for better spacing */
+    }
+}
+
+
+
+
+/* Contact Section */
+.contact-section {
+    padding: 2rem 10%;
+    background-color: #f4f4f4;
+    margin-bottom: 20px; /* Add margin-bottom to create space below the contact section */
+}
+
+.contact-section h2 {
+    font-size: 3rem; /* Increase the size of the header text */
+    margin-bottom: 2rem; /* Add bottom margin */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex-basis: 45%;
+    background-color: transparent; /* Make the background transparent */
+    padding: 0.2rem;
+    border-radius: 10px;
+}
+
+.contact-form h3,
+.contact-location h3 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem; /* Increase the size of the sub-header text */
+    text-align: left; /* Align the text to the left */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Increase the width/horizontal length of the input fields */
+    max-width: 100%; /* Ensure the fields don't exceed the container width */
+    padding: 0.75rem; /* Increase padding for more height */
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #f0c14b;
+    padding: 0.75rem 1.5rem; /* Increase padding for a larger button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #d4a10a;
+    color: black;
+}
+
+.contact-location {
+    flex-basis: 45%;
+    text-align: left; /* Align the text to the left */
+}
+
+.contact-location img {
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+@media (max-width: 584px) {
+
+    /* Contact Section */
+    .contact-section {
+        padding: 1rem 5%; /* Reduce padding for mobile */
+        background-color: #f4f4f4;
+        margin-bottom: 20px; /* Add margin-bottom to create space below the contact section */
+    }
+
+    .contact-section h2 {
+        font-size: 2.5rem; /* Slightly reduce the size of the header text */
+        margin-bottom: 1.5rem; /* Reduce bottom margin */
+        text-align: center; /* Center align the header text */
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center;
+        align-items: center;
+        gap: 2rem; /* Add space between form and location */
+    }
+
+    .contact-form {
+        width: 100%; /* Full width for mobile */
+        background-color: transparent; /* Make the background transparent */
+        padding: 0.5rem; /* Reduce padding */
+        border-radius: 10px;
+        text-align: center; /* Center align the form text */
+    }
+
+    .contact-form h3 {
+        font-size: 1.5rem; /* Slightly reduce the size of the sub-header text */
+        margin-bottom: 1rem;
+    }
+
+    .contact-form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        text-align: left; /* Keep label text aligned left */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%; /* Input fields take full width */
+        max-width: 100%; /* Ensure the fields don't exceed the container width */
+        padding: 0.5rem; /* Reduce padding */
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+    }
+
+    .contact-form button {
+        background-color: #333;
+        color: #f0c14b;
+        padding: 0.5rem 1rem; /* Reduce padding for the button */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%; /* Make the button full width */
+        text-align: center;
+    }
+
+    .contact-form button:hover {
+        background-color: #d4a10a;
+        color: black;
+    }
+
+    .contact-location {
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center align the location text */
+    }
+
+    .contact-location h3 {
+        font-size: 1.5rem; /* Slightly reduce the size of the sub-header text */
+        margin-bottom: 1rem;
+    }
+
+    .contact-location img {
+        width: 100%; /* Ensure image takes full width */
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+}
+
+
+
+/* Hours Section */
+.hours-section {
+    background-color: white; /* Change the background of the whole section to white */
+    padding: 2rem 10%;
+    text-align: left; /* Align the header text to the left */
+    margin-bottom: 60px; /* Add margin-bottom to create space below the hours section */
+}
+
+.hours-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.hours-section table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%; /* Increase the width of the table */
+}
+
+.hours-section th,
+.hours-section td {
+    padding: 1.5rem; /* Increase padding for larger cells */
+    border: 1px solid #333;
+    text-align: left; /* Ensure text alignment is consistent */
+}
+
+.hours-section th {
+    background-color: #ffe599; /* Set header row background color */
+    color: black; /* Ensure text remains black */
+}
+
+.hours-section td {
+    background-color: white; /* Set body rows background color */
+    color: black; /* Ensure text remains black */
+}
+
+/* Footer Section */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin-bottom: 0.5rem;
+}
+
+.site-footer a {
+    color: #f0c14b;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
